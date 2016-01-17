@@ -3,16 +3,22 @@ Django Project Template
 
 Django project structure to kick off development.
 
+Creating a project
+==================
+
 Installation
-============
+------------
 
 To start a new project with this template::
 
     django-admin.py startproject \
-      --template=https://github.com/henriquenogueira/django_project_template/zipball/master \
+      --template= https://goo.gl/kH0mN8 \
       --extension=py,rst,yml \
       --name=Procfile \
       <project_name> .
+
+Setting enviroment properties
+-----------------------------
 
 Once the project is created, we have to set the environment variables on the project:
     $ cp contrib/env-sample .env   # Remember to change the SECRET_KEY
