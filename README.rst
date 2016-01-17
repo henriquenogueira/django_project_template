@@ -12,7 +12,7 @@ Installation
 To start a new project with this template:
 
     django-admin.py startproject \
-      --template= https://goo.gl/kH0mN8 \
+      --template=https://goo.gl/kH0mN8 \
       --extension=py,rst,yml \
       --name=Procfile \
       <project_name> .
