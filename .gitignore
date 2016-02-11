@@ -62,3 +62,7 @@ target/
 *.sqlite3
 .coverage
 .ipynb_checkpoints/
+.python-version
+.env
+.shortcuts
+.idea/
