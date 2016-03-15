@@ -1,11 +1,12 @@
-import os
+from pathlib import Path
+
 from decouple import config, Csv
 from dj_database_url import parse as dburl
 
 ########################################################################
 # Basic configuration
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = config('SECRET_KEY')
 
@@ -69,7 +70,7 @@ WSGI_APPLICATION = '{{ project_name }}.wsgi.application'
 ########################################################################
 # Database
 
-default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
+default_dburl = 'sqlite:///' + str(BASE_DIR.joinpath(BASE_DIR, 'db.sqlite3'))
 
 DATABASES = {
     'default': config('DATABASE_URL', default=default_dburl, cast=dburl),
@@ -109,4 +110,4 @@ USE_TZ = True
 ########################################################################
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = BASE_DIR.joinpath('staticfiles')
