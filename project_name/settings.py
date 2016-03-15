@@ -31,7 +31,7 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-
+    '{{ project_name }}.core.apps.CoreConfig',
 ]
 
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + LOCAL_APPS
