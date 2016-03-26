@@ -110,4 +110,4 @@ USE_TZ = True
 ########################################################################
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR.joinpath('staticfiles')
+STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
