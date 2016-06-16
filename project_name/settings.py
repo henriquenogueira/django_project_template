@@ -28,6 +28,8 @@ DEFAULT_APPS = [
 
 THIRD_PARTY_APPS = [
     'django_extensions',
+    'test_without_migrations',
+    'djangobower',
 ]
 
 LOCAL_APPS = [
@@ -111,3 +113,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
+
+STATICFILES_FINDER = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'djangobower.finders.BowerFinder',
+]
+
+BOWER_COMPONENTS_ROOT = str(BASE_DIR)
+BOWER_INSTALLED_APPS = (
+    "bootstrap#3.3.6",
+    "jquery#2.2.4",
+    "font-awesome#4.6.3",
+)
+
